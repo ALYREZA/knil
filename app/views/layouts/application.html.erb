@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="utf-8">
+    <title> <%= t('title.name') %> </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <% if I18n.locale == :fa %>
+      <%= stylesheet_link_tag 'rtl/rtlSupport', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <% end %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="container">
+		<div id="header">
+			<div id="nav">
+        <%= render "share/header" %>
+      </div> 
+		</div>
+		<div id="wrapper">
+			<div id="sidebar">
+				<%= render "share/sidebar" %>
+			</div>
+			<div id="content">
+          <p id="notice"><%= notice %></p>
+    			<%= yield %>
+			</div>
+		</div>
+    </div>
+  </body>
+</html>

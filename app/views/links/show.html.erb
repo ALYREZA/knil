@@ -1,0 +1,77 @@
+<p>
+  <strong><%= t('label.title') %>:</strong>
+  <%= @link.title %>
+</p>
+<p>
+  <strong><%= t('label.url') %>:</strong>
+  <span style="display: inline-block; direction: ltr; text-align: left"><%= URI.decode @link.url %></span>
+</p>
+<%= link_to t('button.edit'), edit_link_path(@link.uuid) %> |
+<%= link_to t('button.back'), links_path %>
+<div class="chart-container">
+    <canvas id="myChart"></canvas>
+</div>
+
+
+
+<script>
+  var data = <%= @analytic.html_safe %>;
+  var serverFiveDays = <%= @thisTime.html_safe %>;
+  function formatDateOf(days){
+    var result = [];
+    days.forEach(element => {
+      var dateOf = new Date(element);
+      result.push(`${dateOf.getFullYear()}/${dateOf.getMonth()}/${dateOf.getDate()}`);
+    });
+    return result;
+  }
+  var fiveDays = formatDateOf(serverFiveDays);
+  var gData = _u.groupBy(data, function(item){
+    var times = new Date(item.created_at);
+    return `${times.getFullYear()}/${times.getMonth()}/${times.getDate()}`
+  });
+  var uniqArray = _u.difference(fiveDays, Object.keys(gData));
+  uniqArray.forEach(element => {
+      gData[element] = [];
+  });
+var sDate = Object.keys(gData).sort().reduce((accumulator, currentValue) => {
+  accumulator[currentValue] = gData[currentValue];
+  return accumulator;
+}, {});
+var dataArray = _u.map(Object.values(sDate), function(item){
+  return item.length
+});
+
+  var ctx = $('#myChart');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      datasets: [{
+            label: 'page view',
+            data:dataArray,
+            borderColor: "#CBE4F5",
+            backgroundColor: "#0539B7",
+            borderWidth: 4,
+            pointBorderWidth: 10,
+            fill:false
+        }],
+        labels: Object.keys(sDate)
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                    precision: 0,
+                    suggestedMax: 10
+                }
+            }]
+        },
+      elements: {
+            line: {
+                tension: 0
+            }
+        }
+    }
+});
+</script>

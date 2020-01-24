@@ -1,0 +1,71 @@
+<div class="flex">
+    <div class="px-8 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-2/3 lg:py-8 lg:px-12">
+        <header class="bg-yellow-500 flex justify-between sm:items-center px-4 py-3">             
+            <div>
+                <%= link_to t('button.login'), login_path %>
+            </div>
+            <div> 
+                <%= link_to t('title.name'), root_path %>
+            </div>
+        </header>
+        <section class="bg-gray-200">
+            <div class="section-bg">
+                <div class="flex flex-col min-h-full items-center justify-center">
+                    <h1 class="bg-gray-200 text-yellow-800 p-2">
+                            تو فقط یه شانس برای برقراری ارتباط داری
+                    </h1>
+                    <h2 class="bg-gray-200 text-yellow-800 p-2">
+                        پس هدرش نده        
+                    </h2>
+                    
+                    <%= link_to t('button.register'), register_path, class: "bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mt-1" %>
+
+                </div>
+            </div>
+            <h2 class="text-purple-800 text-center pt-5 pb-5">
+                       از هرکجا ، با هر وسیله ایی  ما دست کاربراتون رو میزاریم تو دست لینکاتون
+            </h2>
+            <div class="flex sm:flex-row flex-col bg-black pb-16">
+                <div class="flex-1 p-10">
+                
+                    <%= image_tag "mobile.gif",class:"w-full" %>
+                </div>
+                <div class="flex-1 pr-4 pl-4 pt-5 mt-16 md:text-right text-gray-300 text-center">
+                    <h4 class="text-xl"> چطور کار می کنه ؟ </h4>
+                    <p class="paragraph">
+                            کنیل یه ابزار رایگان برای مدیریت لینک های شماست. هر حرفه ای که داشته باشید بالاخره کنیل به کارتون میاد از وبلاگ نویس گرفته تا هنرمند و پادکستر  و  …
+                    </p>
+                    <p class="paragraph">
+                            شما یه لینک خواهید داشت که مخاطبانتون با اون به همه‌ی لینک‌های دیگه‌ی شما دسترسی خواهند داشت، اون یه لینک رو می تونید هرجایی به اشتراک بزارید مثلا توی بیوی اینستاگرام یا تلگرام یا پروفایل توییتر
+                    </p>   
+                    <p class="paragraph">
+                            بزن بریم که با یه تیر چنتا نشون رو بزنیم
+                    </p>
+                    <div class="text-center mt-16">
+                        <%= link_to t('button.register'), register_path, class: "bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded mt-1" %>
+                    </div>
+                </div>
+            </div>
+            <div class="flex sm:flex-row flex-col pb-40">
+                <div class="items-center justify-center m-8">
+                    <h2 class="text-right"> آمارگیری پیشرفته </h2>
+                    <%= image_tag "chart.svg",class:"h-full w-full" %>
+                    <h3 class="text-right pt-3"> 
+                        آمار لحظه‌ای کاربرانی که روی لینک‌های شما کلیک می‌کنند رو در قالب نمودار مشاهده کنید    
+                    </h3>
+                </div>
+                <div class="items-center justify-center m-8">
+                    <h2 class="text-right"> یه لینک برای همه  </h2>
+                    <%= image_tag "ease.svg",class:"h-full w-full" %>
+                    <h3 class="text-right pt-3"> 
+                        از یه لینک برای بیوی تمام شبکه‌های اجتماعی تون استفاده کنید
+                    </h3>
+                </div>
+            </div>
+
+        </section>
+        <footer class="flex flex-row-reverse">
+            <%= mail_to "KnilDotIr@gmail.com", t('button.contact'), encode: "javascript", subject: "Innovators" %>
+        </footer>
+    </div>
+</div>

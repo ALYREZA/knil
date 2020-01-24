@@ -1,0 +1,76 @@
+en:
+  user_mailer:
+    signup:
+      title: "Verify your email address"
+      description: "To finish setting up your Kinl account, we just need to make sure this email address is yours."
+      mistake: "If you didn't request this code, you can safely ignore this email. Someone else might have typed your email address by mistake."
+      verify: "To verify your email address click on link"
+      tanks: "Thanks,"
+      team: "The Knil account team"
+  active_account:
+    disable: "Disable"
+    active: "Active"
+  pundit:
+    default: 'You cannot perform this action.'
+    link_policy:
+      update?: 'You cannot edit this link!'
+      create?: 'You cannot create new link, Please verify your e-mail address !'
+  title:
+    name: "Knil"
+    description: "means reverse link"
+    home: "Dashboard"
+    editUser: "Editing User"
+    editLink: "Editing Link"
+    links: "Links"
+    newLink: "New Link"
+    newUser: "New User"
+    login: "Login"
+  label:
+    id: "ID"
+    email: "Email"
+    title: "Title"
+    url: "URL"
+    page: "Page Address"
+    username: "Username"
+    status: "Status"
+    expire: "Expired at"
+    password: "Password"
+    passwordConfirm: "Password Confirmation"
+  th:
+    number: "Num."
+    title: "Title"
+    url: "URL"
+  alert:
+    confirm: "Are you sure?"
+  notice:
+    success_user: "User was successfully created. Please check your e-mail address for activation"
+    success_update_user: "User was successfully updated."
+    account_active: 'Your account is activate now'
+    wasActive: 'Your account has been activated successfully'
+    wrong_active_code: 'your link does not work well'
+    success_create_link: "Link was successfully created."
+    success_update_link: "Link was successfully updated."
+    success_destroy_link: "Link was successfully destroyed."
+    ask_login: 'Please First Login'
+    loggedIn: "Logged in!"
+    loggedOut: "Logged out!"
+    wasLogin: "You Are Loged in !"
+  button:
+    home: "dashboard"
+    back: "Back"
+    edit: "Edit"
+    login: "Login"
+    contact: "Contact Us"
+    register: "Register"
+    show: "Show"
+    analytics: "Analytics"
+    save: "Save"
+    destroy: "Destroy"
+    logout: "Logout"
+    updateUser: "Update User"
+    createUser: "Create User"
+    updateLink: "Update Link"
+    createLink: "Create Link"
+    newLink: "New Link"
+    link: "Links"
+

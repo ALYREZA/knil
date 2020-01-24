@@ -1,0 +1,15 @@
+@media screen and (max-width: $mobile) // mobile
+    #header
+        background-color: $danger400 
+        
+@media screen and (max-width: $tablet ) and (min-width: $mobile + 1) // tablet
+    #header
+        background-color: $danger300 
+
+@media screen and (max-width: $laptop ) and (min-width: $tablet + 1) // laptop
+    #header
+        background-color: $warning400
+
+@media screen and (max-width: $desktop ) and (min-width: $laptop + 1) // desktop
+    #header
+        background-color: $warning300

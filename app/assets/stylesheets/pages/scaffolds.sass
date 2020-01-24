@@ -1,0 +1,140 @@
+body
+  background-color: $grey700
+  color: #333
+  font-family: Shabnam
+  font-size: 13px
+  line-height: 18px
+ul
+  list-style: none
+p, ol, ul, td
+  font-family: Shabnam
+  font-size: 13px
+  line-height: 18px
+#container
+  display: flex
+  flex-direction: column
+  #header
+    flex: 1
+    border: 3px solid $warning300
+    border-radius: 12px
+    margin-bottom: 12px
+    #nav
+      flex: 1
+      padding:
+        left: 12px
+        right: 12px
+      h1
+        color: $warning300
+  #wrapper
+    display: flex
+    flex-wrap: wrap
+    #content
+      flex-basis: 80%
+      order: 2
+      color: $primary100
+      margin:
+        left: 5px
+      h1
+        color: $warning300
+        small
+          font-size: .5em
+    #sidebar
+        flex: 1
+        order: 1
+        ul
+          margin:
+            left: 8
+            right: 8
+          padding:
+            right: 12
+          li
+            line-height: 40px
+            a
+              font-size: 1.5em
+
+li.alert
+  color: #000
+pre
+  background-color: #999
+  max-width: 300px
+  height: auto
+  color: #fff
+  padding: 10px
+  font-size: 11px
+code
+  display: block
+  background-color: #000
+  direction: ltr
+  text-align: left
+
+a
+  color: $warning200
+  &:visited
+    color: $warning200
+
+  &:hover
+    color: $grey900
+    background-color: $warning200
+
+th
+  padding-bottom: 5px
+  text-align: center
+
+td
+  padding: 0 5px 7px
+
+div
+  &.field, &.actions
+    margin-bottom: 10px
+
+
+#notice
+  color: $danger300
+
+.field_with_errors
+  padding: 2px
+  background-color: red
+  display: table
+
+#error_explanation
+  width: 450px
+  border: 2px solid red
+  padding: 7px 7px 0
+  margin-bottom: 20px
+  background-color: #f0f0f0
+
+  h2
+    text-align: left
+    font-weight: bold
+    padding: 5px 5px 5px 15px
+    font-size: 12px
+    margin: -7px -7px 0
+    background-color: #c00
+    color: #fff
+  ul li 
+    font-size: 12px
+    list-style: square
+label 
+  display: block
+td.url
+  direction: ltr
+  text-align: left
+input[type='text'], input[type='email'], input[type='url'], input[type='password']
+  height: 25px
+  min-width: 35%
+  font-size: 1.3em
+
+input[type='text']
+  direction: rtl
+  text-align: right
+
+input[type='email'], input[type='url']
+  direction: ltr
+  text-align: left
+#myChart
+  background-color: $warning200
+.chart-container
+  position: relative
+  height: 40vh
+  width: 80vw
+  @include breakpoint($mobile) { width: 100vw;}

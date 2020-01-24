@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uuid: MyString
+  title: MyString
+  isEnabled: 1
+  user: one
+  isHighlight: 1
+  url: MyString
+  order: 1
+
+two:
+  uuid: MyString
+  title: MyString
+  isEnabled: 1
+  user: two
+  isHighlight: 1
+  url: MyString
+  order: 1

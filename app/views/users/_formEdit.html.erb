@@ -1,0 +1,36 @@
+<%= form_with(model: user,url: "#",local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :email, t('label.email') %>
+    <input readonly="readonly" type="text" value="<%= user.email %>" id="user_email">
+  </div>
+
+  <div class="field">
+    <%= form.label :username, t('label.username') %>
+    <%= form.text_field :username %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password, t('label.password') %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password_confirmation, t('label.passwordConfirm') %>
+    <%= form.password_field :password_confirmation %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit t('button.updateUser')  %>
+  </div>
+<% end %>

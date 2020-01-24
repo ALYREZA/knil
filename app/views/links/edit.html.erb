@@ -1,0 +1,6 @@
+<h1><%= t('title.editLink') %></h1>
+
+<%= render 'formEdit', link: @link %>
+
+<%= link_to t('button.show'), link_path(@link.uuid) %> |
+<%= link_to t('button.back'), links_path %>

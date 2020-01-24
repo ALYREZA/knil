@@ -1,0 +1,53 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@font-face {
+    font-family: Shabnam;
+    src: url(<%= asset_path 'Shabnam.eot' %>);
+    src: url(<%= asset_path 'Shabnam.eot?#iefix' %>) format('embedded-opentype'),
+         url(<%= asset_path 'Shabnam.woff2' %>) format('woff2'),
+         url(<%= asset_path 'Shabnam.woff' %>) format('woff'),
+         url(<%= asset_path 'Shabnam.ttf' %>) format('truetype');
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: Shabnam;
+    src: url(<%= asset_path 'Shabnam-Bold.eot' %>);
+    src: url(<%= asset_path 'Shabnam-Bold.eot?#iefix' %>) format('embedded-opentype'),
+         url(<%= asset_path 'Shabnam-Bold.woff2' %>) format('woff2'),
+         url(<%= asset_path 'Shabnam-Bold.woff' %>) format('woff'),
+         url(<%= asset_path 'Shabnam-Bold.ttf' %>) format('truetype');
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: Shabnam;
+    src: url(<%= asset_path 'Shabnam-Light.eot' %>);
+    src: url(<%= asset_path 'Shabnam-Light.eot?#iefix' %>) format('embedded-opentype'),
+         url(<%= asset_path 'Shabnam-Light.woff2' %>) format('woff2'),
+         url(<%= asset_path 'Shabnam-Light.woff' %>) format('woff'),
+         url(<%= asset_path 'Shabnam-Light.ttf' %>) format('truetype');
+    font-weight: 300;
+  }
+body {
+    font-family: Shabnam;
+}
+.container-bg {
+    background-color: #DFDBE5;
+    background-size: contain;
+    background-image: url(<%= asset_path 'topography.svg' %>);
+}
+.section-bg {
+    height: 28rem;
+    background-color: #DFDBE5;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-image: url(<%= asset_path 'insta.jpg' %>);
+}
+.paragraph {
+    @apply text-base;
+    direction: rtl;
+    text-align: right;
+    line-height: 2rem;
+}

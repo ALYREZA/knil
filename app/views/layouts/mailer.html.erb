@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+.m-fullw {
+  direction: <%= I18n.locale == "fa" ? 'rtl' : 'ltr' %>;
+  text-align: <%= I18n.locale == "fa" ? 'right' : 'left' %>;
+}
+    </style>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

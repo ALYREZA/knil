@@ -1,0 +1,14 @@
+<div id="wrapper">
+    <% @links.each do |link| %>
+        <h2><%= link_to link.title, goto_path(link.uuid) %></h2>
+    <% end %>
+    <div id="copy">
+        <p>
+            ساخته شده با 
+            <%= link_to t('title.name'), root_url %>
+            به سفارش
+             <%= link_to @user.username, api_url(@user.username) %> 
+
+        </p>
+    </div>
+</div>

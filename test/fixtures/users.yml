@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  username: MyString
+  status: 1
+  expired_at: 2019-07-26 13:17:42
+  password_digest: <%= BCrypt::Password.create('secret') %>
+
+two:
+  email: MyString
+  username: MyString
+  status: 1
+  expired_at: 2019-07-26 13:17:42
+  password_digest: <%= BCrypt::Password.create('secret') %>

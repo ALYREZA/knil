@@ -1,0 +1,56 @@
+@import 'share/variables';
+@import 'share/mixins';
+@import 'share/colors';
+$main-color: adjust-color(#6b717f, $red: 180, $blue: 50, $green: 90)
+$light: random(30)
+$satur: random(99)
+$rndColor: scale-color($main-color, $lightness: $light , $saturation: $satur )
+$list1: $rndColor, $grey800
+html
+    height: 100%
+body
+    @include gradient(top, $list1)
+#wrapper
+    margin:
+        top: 77px   
+    h2
+        margin: 0 auto
+        display: flex
+        min-height: 50px
+        text-align: center
+        font-size: 1.5em
+        flex: 1
+        border: 1px solid transparent
+        border-radius: 50 / 2+px
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        @include breakpoint($desktop) { width: 60%;}
+        @include breakpoint($retina) { width: 70%;}
+        @include breakpoint($mobile) { font-size: .9em;}
+        @include breakpoint($tablet) { width: 95%; margin-right: 12px; margin-left: 12px;  }
+        background-color: invert(nth($list1, 1))
+        margin:
+            bottom: 16px
+        a
+            color: nth($list1, 1)
+            padding: 4px 5px
+            @include breakpoint($mobile) { padding: 10px 5px;}
+            display: block
+            border: 1px solid transparent
+            border-radius: 50 / 2+px
+            width: 100%
+            height: auto
+        a:hover
+            text-decoration: none
+#copy
+    p
+        text-align: center
+        direction: rtl
+        font-size: .8em
+        color: invert(nth($list1, 2))
+        a
+            display: inline-block
+            text-decoration: underline
+            color: inherit
+   

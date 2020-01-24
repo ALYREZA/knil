@@ -1,0 +1,22 @@
+<h1>
+  <%= t('title.home') %>
+  <small>[<%= link_to t('button.edit'), edit_user_path %>]</small>  
+</h1>
+<p>
+  <strong><%= t('label.page') %>:</strong>
+  <%= link_to api_url(@user.username) ,api_url(@user.username) %>
+</p>
+<p>
+  <strong><%= t('label.email') %>:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong><%= t('label.username') %>:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+  <strong><%= t('label.status') %>:</strong>
+  <%= @user.status_human %>
+</p>
